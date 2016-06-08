@@ -3,8 +3,8 @@
 	"description": "SVG loading spinner fueled by CSS keyframes",
 	"author": "Dicson Deepak",
 	"author-email": "dicson.deepak@krds.fr",
-	"image": "",
-	"gif": "",
+	"image": "img/packshot.png",
+	"gif": "img/packshot.gif",
 	"tags": "loader, svg, animation",
 	"repo-url": "https://github.com/krdsbox/spiral-spinner"
 }
