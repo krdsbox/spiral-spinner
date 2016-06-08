@@ -3,25 +3,40 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Box Starter</title>
+	<title>Spiral Spinner</title>
 	<link rel="icon" href="./favicon.png">
+	<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="style/box.css">
 	<link rel="stylesheet" href="style/main.css">
 </head>
 <body>
-	<nav class="boxActions">
-		<a href="#" id="previous_box" title="Previous box">
-			<img src="img/back-icon.svg" alt="back" />
-		</a>
-		<a href="#" id="box_home" title="Box home">
-			<img src="img/krdsbox.svg" alt="KRDS Box" />
-		</a>
-		<a href="#" id="github_repo" title="Github repo">
-			<img src="img/github.svg" alt="Github" />
-		</a>
-	</nav>
-	<h1>Box Starter</h1>
-	<p>An optional &amp; minimal starter kit for krdsbox components</p>
+	<div class="container">
+		<header>
+			<h1>Spiral Spinner</h1>
+			<p>SVG loading spinner fueled by CSS keyframes</p>
+		</header>
+		<div class="loading">
+			<svg class="progressCircle" x="0px" y="0px" viewBox="0 0 166 166" version="1.1" xmlns="http://www.w3.org/2000/svg">
+				<circle class="c1" stroke-miterlimit="10" cx="83" cy="83" r="80" fill="transparent"></circle>
+				<circle class="c1_1" stroke-miterlimit="10" cx="83" cy="83" r="80" fill="transparent"></circle>
+				<circle class="c2" stroke-miterlimit="10" cx="83" cy="83" r="65" fill="transparent"></circle>
+				<circle class="c2_1" stroke-miterlimit="10" cx="83" cy="83" r="65" fill="transparent"></circle>
+				<circle class="c3" stroke-miterlimit="10" cx="83" cy="83" r="50" fill="transparent"></circle>
+			</svg>
+			<span>Loading</span>
+		</div>
+		<nav class="boxActions">
+			<a href="#" id="previous_box" title="Previous box">
+				<img src="img/back-icon.svg" alt="back" />
+			</a>
+			<a href="#" id="box_home" title="Box home">
+				<img src="img/krdsbox.svg" alt="KRDS Box" />
+			</a>
+			<a href="#" id="github_repo" title="Github repo">
+				<img src="img/github.svg" alt="Github" />
+			</a>
+		</nav>
+	</div>
 	<script src="js/main.js"></script>
 </body>
 </html>

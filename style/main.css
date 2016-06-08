@@ -1,7 +1,383 @@
-/* your styles here */
-body {
-	font-family: "Helvetica neue", arial, sans-serif;
-	background: #333;
-	color: #fff;
-	text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+body,html {
+    background-color: #fff;
+	 background-size: cover;
+	 color: #333;
+    font-family: sans-serif,Arial;
+    height: 100%;
+    width: 100%
+}
+
+button,input {
+    font-family: sans-serif,Arial
+}
+
+button:active,button:focus,input:active,input:focus {
+    outline: 0
+}
+
+a {
+    text-decoration: none
+}
+
+a:active,a:focus {
+    outline: 0
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 700;
+    letter-spacing: 1px
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    text-align: center
+}
+h1 {
+	font: 50px lobster, sans-serif;
+	color: #e54a52;
+	text-shadow: 2px 2px 0 #333;
+	padding-top: 5vh;
+}
+p {
+	font: 15px lobster, sans-serif;
+}
+
+@media (min-width: 50em) {
+	h1 {
+		font-size: 70px;
+	}
+	p {
+		font-size: 18px;
+	}
+}
+
+.container>img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    max-width: 700px
+}
+
+.infinite {
+    animation-iteration-count: infinite
+}
+
+.loading {
+    width: 166px;
+    height: 166px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%)
+}
+
+.loading svg {
+    width: 166px;
+    height: 166px;
+    position: absolute;
+    left: 0;
+    top: 0
+}
+
+.loading span {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-family: sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 15px;
+    transform: translateY(-50%);
+    letter-spacing: 1px
+}
+
+.progressCircle {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0
+}
+
+.progressCircle circle {
+    backface-visibility: hidden;
+    stroke-width: 3px;
+    transform-origin: center;
+    stroke-linecap: round;
+    stroke-linejoin: round
+}
+
+.progressCircle circle.c1 {
+    stroke: #e54a52;
+    stroke-dasharray: 502px;
+    stroke-dashoffset: 502px;
+    transform: rotate(-55deg);
+    animation: c1 5s linear;
+    animation-iteration-count: infinite;
+    opacity: 0
+}
+
+.progressCircle circle.c1_1 {
+    stroke: #e54a52;
+    stroke-dasharray: 502px;
+    stroke-dashoffset: 502px;
+    transform: rotate(200deg);
+    animation: c1_1 5s linear;
+    animation-iteration-count: infinite;
+    opacity: 0
+}
+
+.progressCircle circle.c2 {
+    stroke: #e6c262;
+    stroke-dasharray: 408px;
+    stroke-dashoffset: 408px;
+    transform: rotate(-215deg);
+    animation: c2 5s linear;
+    animation-iteration-count: infinite;
+    opacity: 0
+}
+
+.progressCircle circle.c2_1 {
+    stroke: #e6c262;
+    stroke-dasharray: 408px;
+    stroke-dashoffset: 408px;
+    transform: rotate(-50deg);
+    animation: c2_1 5s linear;
+    animation-iteration-count: infinite;
+    opacity: 0
+}
+
+.progressCircle circle.c3 {
+    stroke: #4bb0c4;
+    stroke-dasharray: 314px;
+    stroke-dashoffset: 314px;
+    transform: rotate(-115deg);
+    animation: c3 5s linear;
+    animation-iteration-count: infinite;
+    opacity: 0
+}
+
+@keyframes c1 {
+    0% {
+        transform: rotate(55deg);
+        opacity: 0;
+        stroke-dashoffset: 502px
+    }
+
+    15% {
+        transform: rotate(-150deg);
+        opacity: 1;
+        stroke-dashoffset: 480px
+    }
+
+    30% {
+        transform: rotate(200deg);
+        opacity: 1;
+        stroke-dashoffset: 400px
+    }
+
+    45% {
+        transform: rotate(720deg);
+        opacity: 1;
+        stroke-dashoffset: 350px
+    }
+
+    58% {
+        transform: rotate(600deg);
+        opacity: 1;
+        stroke-dashoffset: 300px
+    }
+
+    68% {
+        transform: rotate(720deg);
+        opacity: 1;
+        stroke-dashoffset: 350px
+    }
+
+    100%,85% {
+        transform: rotate(450deg);
+        opacity: 0;
+        stroke-dashoffset: 502px
+    }
+}
+
+@keyframes c1_1 {
+    0% {
+        transform: rotate(200deg);
+        opacity: 0;
+        stroke-dashoffset: 502px
+    }
+
+    15% {
+        transform: rotate(100deg);
+        opacity: 1;
+        stroke-dashoffset: 480px
+    }
+
+    30% {
+        transform: rotate(350deg);
+        opacity: 1;
+        stroke-dashoffset: 400px
+    }
+
+    45% {
+        transform: rotate(870deg);
+        opacity: 1;
+        stroke-dashoffset: 350px
+    }
+
+    58% {
+        transform: rotate(750deg);
+        opacity: 1;
+        stroke-dashoffset: 300px
+    }
+
+    68% {
+        transform: rotate(950deg);
+        opacity: 1;
+        stroke-dashoffset: 350px
+    }
+
+    100%,80% {
+        transform: rotate(450deg);
+        opacity: 0;
+        stroke-dashoffset: 502px
+    }
+}
+
+@keyframes c2 {
+    0% {
+        transform: rotate(-215deg);
+        opacity: 0;
+        stroke-dashoffset: 408px
+    }
+
+    15% {
+        transform: rotate(-150deg);
+        opacity: 1;
+        stroke-dashoffset: 390px
+    }
+
+    30% {
+        transform: rotate(-450deg);
+        opacity: 1;
+        stroke-dashoffset: 300px
+    }
+
+    45% {
+        transform: rotate(-720deg);
+        opacity: 1;
+        stroke-dashoffset: 250px
+    }
+
+    58% {
+        transform: rotate(-600deg);
+        opacity: 1;
+        stroke-dashoffset: 200px
+    }
+
+    68% {
+        transform: rotate(-720deg);
+        opacity: 1;
+        stroke-dashoffset: 250px
+    }
+
+    100%,75% {
+        transform: rotate(-450deg);
+        opacity: 0;
+        stroke-dashoffset: 408px
+    }
+}
+
+@keyframes c2_1 {
+    0% {
+        transform: rotate(-50deg);
+        opacity: 0;
+        stroke-dashoffset: 408px
+    }
+
+    15% {
+        transform: rotate(50deg);
+        opacity: 1;
+        stroke-dashoffset: 390px
+    }
+
+    30% {
+        transform: rotate(-250deg);
+        opacity: 1;
+        stroke-dashoffset: 300px
+    }
+
+    45% {
+        transform: rotate(-520deg);
+        opacity: 1;
+        stroke-dashoffset: 250px
+    }
+
+    58% {
+        transform: rotate(-400deg);
+        opacity: 1;
+        stroke-dashoffset: 350px
+    }
+
+    68% {
+        transform: rotate(-520deg);
+        opacity: 1;
+        stroke-dashoffset: 250px
+    }
+
+    100%,75% {
+        transform: rotate(-250deg);
+        opacity: 0;
+        stroke-dashoffset: 408px
+    }
+}
+
+@keyframes c3 {
+    0% {
+        transform: rotate(-115deg);
+        opacity: 0;
+        stroke-dashoffset: 314px
+    }
+
+    15% {
+        transform: rotate(-220deg);
+        opacity: 1;
+        stroke-dashoffset: 290px
+    }
+
+    35% {
+        transform: rotate(870deg);
+        opacity: 1;
+        stroke-dashoffset: 10px
+    }
+
+    45% {
+        transform: rotate(700deg);
+        opacity: 1;
+        stroke-dashoffset: 10px
+    }
+
+    50% {
+        transform: rotate(650deg);
+        opacity: 1;
+        stroke-dashoffset: 0
+    }
+
+    100%,75% {
+        transform: rotate(-115deg);
+        opacity: 1;
+        stroke-dashoffset: -314px
+    }
 }
